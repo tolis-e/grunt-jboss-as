@@ -1,5 +1,12 @@
 language: node_js
-node_js:
-  - "0.10"
+before_install:
+  - phantomjs --version
+install:
+  - cd ..
+  # clone the repository which contains the REST service backend needed for our CORS/JSONP tests execution
+  - git clone https://github.com/tolis-e/aerogear-js-cors-jsonp-tests.git
+  - cd grunt-jboss-as/example
 before_script:
   - npm install -g grunt-cli
+  - npm install
+script: grunt

@@ -47,19 +47,19 @@ module.exports = function (grunt) {
                         bindingAddress: '127.0.0.1',
                         keystoreAlias: 'aerogear',
                         keystorePassword: 'aerogear',
-                        keystoreFile: '/home/aemmanou/git-repos/aerogear-js-cors-jsonp-tests/help-files/aerogear.keystore',
+                        keystoreFile: '/home/travis/build/tolis-e/aerogear-js-cors-jsonp-tests/help-files/aerogear.keystore',
                         securityProtocol: 'TLSv1',
                         baseProcessId: 'jboss-as'
                     }
                 },
                 deploy: {
-                    archive: '/home/aemmanou/git-repos/aerogear-js-cors-jsonp-tests/aerogear-rest-service/target/aerogear-rest-service.war'
+                    archive: '/home/travis/build/tolis-e/aerogear-js-cors-jsonp-tests/aerogear-rest-service/target/aerogear-rest-service.war'
                 }
             }
         },
         maven: {
             build: {
-                pom: '/home/aemmanou/git-repos/aerogear-js-cors-jsonp-tests/aerogear-rest-service/pom.xml'
+                pom: '/home/travis/build/tolis-e/aerogear-js-cors-jsonp-tests/aerogear-rest-service/pom.xml'
             }
         },
         qunit: {
