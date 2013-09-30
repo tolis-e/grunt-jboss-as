@@ -163,7 +163,7 @@ You can pass more arguments by adding `:` and the argument's value. For instance
 
 _`grunt start-jboss-as:/home/user/jbosss-7.1.1.Final:128m:1024m`_
 
-Note the JBoss AS pid is printed in the stdout: `[INFO] start-jboss-as: =====> process id: '__3835'`. You can use the pid number e.g 3835 in order to kill the process, by using the `stop-process` task:
+Note that the JBoss AS pid is printed in the stdout: `[INFO] start-jboss-as: =====> process id: '__3835'`. You can use the pid number e.g 3835 in order to kill the process, by using the `stop-process` task:
 
 _`grunt stop-process:3835`_
 
