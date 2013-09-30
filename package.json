@@ -1,0 +1,38 @@
+{
+    "name": "grunt-jboss-as",
+    "description": "Download, extract & start JBoss AS on standalone mode, clean-build a mavenized project, (re)deploy an archive on JBoss AS and kill processes.",
+    "title": "Grunt JBoss AS",
+    "version": "0.1.0",
+    "homepage": "https://github.com/tolis-e/grunt-jboss-as",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/tolis-e/grunt-jboss-as.git"
+    },
+    "author": {
+        "name": "Tolis Emmanouilidis",
+        "url": "http://github.com/tolis-e/grunt-jboss-as"
+    },
+    "maintainers": {
+        "name": "Tolis Emmanouilidis",
+        "email": "tolisemm@gmail.com"
+    },
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "keywords": [
+        "jboss",
+        "jboss-as",
+        "administration",
+        "grunt plugin",
+        "jboss application server",
+        "jboss as"
+    ],
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "adm-zip": "~0.4.3",
+        "grunt-contrib-jshint": "~0.6.4"
+    }
+}
