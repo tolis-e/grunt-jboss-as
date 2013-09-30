@@ -1,6 +1,6 @@
 {
     "name": "grunt-jboss-as",
-    "description": "Download, extract & start JBoss AS on standalone mode, clean-build a mavenized project, (re)deploy an archive on JBoss AS and kill processes.",
+    "description": "Download, extract and start JBoss with custom JVM parameters and an optional keystore, clean-build a Mavenized project and deploy an archive on JBoss AS.",
     "title": "Grunt JBoss AS",
     "version": "0.1.0",
     "homepage": "https://github.com/tolis-e/grunt-jboss-as",
