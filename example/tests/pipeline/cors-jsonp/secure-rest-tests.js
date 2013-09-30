@@ -20,7 +20,7 @@
         BASE_URL = ["https://localhost:8444", REST_WS_CONTEXT_PATH].join("");
     
     // create utility lib
-    UtilLib =
+    var UtilLib =
     {
         memberExists: function (id, listOrMember)
         {
@@ -29,9 +29,11 @@
                 for (var i=0; i<listOrMember.length; i++)
                 {
                     if (listOrMember[i] && listOrMember[i].id === id)
+                    {
                         return true;
+                    }
                 }
-            } 
+            }
             else if (id && listOrMember && listOrMember.id === id)
             {
                 return true;
@@ -48,41 +50,41 @@
                     baseURL: BASE_URL,
                     endpoint: "add"
                 }
-            }, 
+            },
             {
                 name: "updateMember",
                 settings: {
                     baseURL: BASE_URL,
                     endpoint: "update"
-                }                
+                }
             },
             {
                 name: "readMembers",
                 settings: {
                     baseURL: BASE_URL,
                     endpoint: "members"
-                }                
+                }
             },
             {
                 name: "readMembersJSONP",
                 settings: {
                     baseURL: BASE_URL,
                     endpoint: "membersjsonp"
-                }                
+                }
             },
             {
                 name: "removeMember",
                 settings: {
                     baseURL: BASE_URL,
                     endpoint: "remove"
-                }                
+                }
             },
             {
                 name: "readMember",
                 settings: {
                     baseURL: BASE_URL,
                     endpoint: "member"
-                }                
+                }
             },
             {
                 name: "readMemberCustom",
@@ -90,7 +92,7 @@
                     baseURL: BASE_URL,
                     endpoint: "member",
                     recordId: "customId"
-                }                
+                }
             },
             {
                 name: "memberPages",
@@ -320,7 +322,7 @@
         $.when(save).done(function (s1) {
             
             update = updateMemberPipe.save({
-                    id: member_id, 
+                    id: member_id,
                     description: "description_3"
                 }, {
                     success: function (data, textStatus, jqXHR) {
@@ -499,7 +501,7 @@
             read = readMemberPipe.read({
                     query: {
                         limit: 1
-                }, 
+                },
                 id: member_id,
                 success: function (data, textStatus, jqXHR) {
                     ok(true, "GET - read data");
@@ -550,7 +552,7 @@
             read = readMemberCustomPipe.read({
                     query: {
                         limit: 1
-                }, 
+                },
                 customId: member_id,
                 success: function (data, textStatus, jqXHR) {
                     ok(true, "GET - read data");

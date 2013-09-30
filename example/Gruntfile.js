@@ -78,7 +78,7 @@ module.exports = function (grunt) {
         },
         jshint: {
             all: {
-                src: [ "Gruntfile.js" ],
+                src: [ "Gruntfile.js", "tests/pipeline/**/*.js" ],
                 options: {
                     jshintrc: "../.jshintrc"
                 }
