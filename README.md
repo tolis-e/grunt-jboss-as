@@ -1,4 +1,4 @@
-# grunt-jboss-as
+# grunt-jboss-as [![Build Status](https://travis-ci.org/tolis-e/grunt-jboss-as.png?branch=0.1.0)](https://travis-ci.org/tolis-e/grunt-jboss-as)
 > This project contains a Grunt plugin which includes tasks to:
 
 * Download and extract JBoss AS
