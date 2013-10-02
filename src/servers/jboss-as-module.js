@@ -20,6 +20,7 @@ var grunt = require('grunt'),
     FileModule = require('../common/file-module').FileModule,
     execute = require('child_process').exec,
     fileSystem = require('fs'),
+    path = require('path'),
     StringModule = require('../common/string-module').StringModule;
 
 module.exports.JBossModule =
@@ -128,7 +129,7 @@ module.exports.JBossModule =
                     // remove all https connectors
                     regExpValuePairs["<connector[^>]*socket-binding=\"https\"[^<]*<ssl[^<]*(</ssl\\s*>)?[^<]*</connector\\s*>"] = "";
                     // add new https connector
-                    regExpValuePairs["<subsystem xmlns=\"urn:jboss:domain:web:1.1\"[^>]*>"] = ["<subsystem xmlns=\"urn:jboss:domain:web:1.1\" default-virtual-server=\"default-host\" native=\"false\">\n<connector name=\"https\" protocol=\"HTTP/1.1\" scheme=\"https\" socket-binding=\"https\" secure=\"true\">", "<ssl name=\"ssl-setup\" key-alias=\"", kAlias,"\" password=\"", kPassword,"\" certificate-key-file=\"", kFile,"\" protocol=\"", kProtocol,"\"/>", "</connector>"].join('');
+                    regExpValuePairs["<subsystem xmlns=\"urn:jboss:domain:web:1.1\"[^>]*>"] = ["<subsystem xmlns=\"urn:jboss:domain:web:1.1\" default-virtual-server=\"default-host\" native=\"false\">\n<connector name=\"https\" protocol=\"HTTP/1.1\" scheme=\"https\" socket-binding=\"https\" secure=\"true\">", "<ssl name=\"ssl-setup\" key-alias=\"", kAlias,"\" password=\"", kPassword,"\" certificate-key-file=\"", path.resolve(kFile),"\" protocol=\"", kProtocol,"\"/>", "</connector>"].join('');
                 }
             }
 
