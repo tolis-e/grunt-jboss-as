@@ -47,7 +47,7 @@ module.exports = function (grunt) {
                         bindingAddress: '127.0.0.1',
                         keystoreAlias: 'aerogear',
                         keystorePassword: 'aerogear',
-                        keystoreFile: '../../aerogear-js-cors-jsonp-tests/help-files/aerogear.keystore',
+                        keystoreFile: '../../aerogear-js-cors-jsonp-tests/jboss-as-conf/aerogear.keystore',
                         securityProtocol: 'TLSv1',
                         baseProcessId: 'jboss-as'
                     }
