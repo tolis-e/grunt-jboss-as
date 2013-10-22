@@ -22,6 +22,6 @@ module.exports.StringModule =
     },
     endsWith: function (str, suffix)
     {
-        return String(str).indexOf(suffix, this.length - suffix.length) !== -1;
+        return String(str).indexOf(suffix, str.length - suffix.length) !== -1;
     }
 };
