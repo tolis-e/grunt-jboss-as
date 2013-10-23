@@ -30,9 +30,11 @@
         "jboss application server",
         "jboss as"
     ],
+    "dependencies": {
+        "adm-zip": "~0.4.3"
+    },
     "devDependencies": {
         "grunt": "~0.4.1",
-        "adm-zip": "~0.4.3",
         "grunt-contrib-jshint": "~0.6.4"
     }
 }
